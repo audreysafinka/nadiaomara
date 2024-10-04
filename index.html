@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Puzzle</title>
+    <link rel="stylesheet" href="puzzle.css">
+    <script src="puzzle.js" defer></script>
+</head>
+
+<body>
+    <div id="background"></div> <!-- Latar belakang penuh untuk amplop -->
+    
+    <div id="envelope" class="envelope" onclick="startGame()">
+        <img src="amplop.png" alt="Amplop" />
+        <div class="start-text">CLICK HERE</div>
+    </div>
+
+    <div id="paper-container" style="display: none;">
+        <div class="paper">
+            <img src="kertas.png" alt="Kertas" class="paper-image" />
+            <div class="poem">
+                Untuk Wawak, Sang Maestro KHW<br><br>
+                Wak Nad, di layar kau bersinar,<br>
+                Sepuluh juta subscriber, langkahmu takkan pudar.<br>
+                Diamond Play Button, simbol kerja keras,<br>
+                Kisah horor dan kriminal, selalu menyentuh dasar.<br><br>
+                
+                KHW yang kau bagi, malam jadi menegangkan,<br>
+                Misteri yang terungkap, hati bergetar dan tertekan.<br>
+                Tokoh agama dan politik, sejarah yang kau ceritakan,<br>
+                Menghadirkan pengetahuan, dalam setiap penghayatan.<br><br>
+                
+                Sebelum tidur, adikku dan aku menanti,<br>
+                Cerita darimu membawa kita terhanyut lagi.<br>
+                Sambil makan atau belajar, kau setia menemani,<br>
+                Aku seorang pelajar, kau jadi inspirasi.<br><br>
+                
+                Bahkan saat coding, untuk tugas kampus,<br>
+                Kau ada di telinga, membuatku tak merasa lepas.<br>
+                Terima kasih, Nadia, untuk semua kisah yang kau bagi,<br>
+                Cahaya di malam hari, sahabat sejati yang takkan berhenti.<br><br>
+                
+                Kita rayakan bersamamu, pencapaian ini,<br>
+                Sepuluh juta suara, cinta yang takkan berhenti.<br>
+                Teruslah bercerita, semangatmu takkan padam,<br>
+                Di hati kami, kau adalah bintang yang terang.
+            </div>
+            <div class="next-text" onclick="goToPuzzle()">
+                NEXT ➔
+            </div> <!-- Teks NEXT dengan tanda panah -->
+        </div>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <img id="title" src="./logo.jpg" alt="Logo" /> <!-- Menambahkan logo di sini -->
+        <div id="board"></div>
+        <h1>Turns: <span id="turns">0</span></h1>
+    </div>
+
+    <!-- Tambahkan elemen audio untuk suara -->
+    <audio id="startSound" src="sound.mp3"></audio> <!-- Ganti dengan nama file audio yang sesuai -->
+</body>
+</html>
